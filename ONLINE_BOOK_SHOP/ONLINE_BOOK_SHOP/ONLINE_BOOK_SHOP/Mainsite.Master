@@ -1,0 +1,655 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mainsite.master.cs" Inherits="ONLINE_BOOK_SHOP.Mainsite" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css" />
+
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!--Google Font-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+    </style>
+
+    <link rel="icon" type="image/x-icon" href="images/book-shop.gif" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Simple splash screen-->
+        
+        
+        <div class="splash">
+            <div class="color-line"></div>
+            <div class="splash-title">
+                <%--<h1>BOOK_SHOP </h1>
+                --%>
+                <p>Loading... </p>
+                <div class="spinner">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div id="header">
+            <div class="color-line">
+            </div>
+            <div id="logo" class="light-version" style="padding: 18px 10px 10px 10px;">
+
+               <img class="logo" src="images/giphy.gif" style="max-height: 250px; width: 100px;" />
+            </div>
+            <br />
+            <nav role="navigation">
+                <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>
+                <div class="small-logo">
+                    <span class="text-primary">BMS</span>
+                </div>
+                <div class="mobile-menu">
+                    <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                        <i class="fa fa-chevron-down"></i>
+                    </button>
+                    <div class="collapse mobile-navbar" id="mobile-collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a class="" href="#">Logout</a>
+                            </li>
+                            <li>
+                                <a class="" href="#">Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav no-borders">
+                        <%--  <li class="dropdown">
+                            <a class="dropdown-toggle label-menu-corner" href="#">
+                                <i class="pe-7s-bell"></i>
+                                <span class="label label-success" id="countmsg">0</span>
+                            </a>
+                        </li>--%>
+
+                        <li style="padding-right: 10px;">
+                            <div>
+                                <asp:ImageButton ID="ImageButton1" src="images/reset-password.png" Textmode="" CssClass="btncheck" Style="width: 40px; padding-right: 5px; padding-top: 5px; margin: 0; height: 40px;" runat="server" OnClick="btncheck_Click1"></asp:ImageButton>
+
+                            </div>
+                        </li>
+
+                        <li style="padding-right: 20px;">
+                            <div>
+                                <asp:ImageButton ID="btncheck" src="images/switch.png" Textmode="" CssClass="btncheck" Style="width: 40px; padding-right: 5px; padding-top: 5px; margin: 0; height: 40px;" runat="server" OnClick="btncheck_Click"></asp:ImageButton>
+                            </div>
+                        </li>
+                        <%-- <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                <i class="pe-7s-keypad"></i>
+                            </a>
+
+                            <div class="dropdown-menu hdropdown bigmenu animated flipInX">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#"><i class="fa fa-question-circle text-info"></i>
+                                                    <h5>FAQs</h5>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#"><i class="fa fa-star text-warning"></i>
+                                                    <h5>Price List</h5>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#"><i class="fa fa-star text-success"></i>
+                                                    <h5>Price List Do@Home</h5>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <i class="fa fa-star-o text-danger"></i>
+                                                    <h5>Price List Homeopathy</h5>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                                <i class="fa fa-exchange"></i>
+                            </a>
+                            <ul class="dropdown-menu hdropdown animated flipInX">
+                                <li><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i>Reference</a></li>
+                            </ul>
+                        </li>--%>
+                        <%--<li class="dropdown">
+                            <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                                <i class="pe-7s-user"></i>
+                                <!--<span class="label label-success">4</span>-->
+                            </a>
+                            <ul class="dropdown-menu hdropdown animated flipInX">
+                                <!-- <div class="title">
+                            You have 4 new messages
+                        </div>-->
+
+                                <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i>Reminder </a></li>
+                                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Profile</a></li>
+                                <li><a href="Change_Password.aspx"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a></li>
+
+
+                            </ul>
+
+                        </li>--%>
+                    </ul>
+
+
+                </div>
+
+            </nav>
+        </div>
+        
+
+        <!-- Navigation -->
+        <aside id="menu">
+            <div id="navigation">
+                <div class="profile-picture">
+                    <a href="#">
+                        <img src="images/user.jpg" class="img-circle m-b" alt="logo" width="74" />
+                    </a>
+
+                    <div class="stats-label text-color">
+                        <span class="font-extra-bold font-uppercase">
+                            <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                        </span>
+                        <span class="font-extra-bold font-uppercase">(<asp:Label ID="Label1" runat="server" Text=""></asp:Label>)
+                        </span>
+                    </div>
+                </div>
+
+                <ul class="nav" id="side-menu">
+
+
+                    <li id="citystock" runat="server" visible="false">
+                        <a href="book_stocks.aspx">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Stock</span> </a>
+
+                    </li>
+
+                    <li id="cityreport" runat="server" visible="false">
+                        <a href="#">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Reports</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+
+                            <li><a href="Book_Centers_Stocks.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Details of Stock</a></li>
+                        </ul>
+                    </li>
+
+
+                    <%--  <li id="citycenter" runat="server" visible="false">
+                        <a href="#"><img src="images/main-icon.png" style="width:20px; height:20px;"/> <span class="nav-label" style="padding-left:3px;" >Book Center</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="book_Req_from_Center.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>   Pending Book Order</a></li>
+                            <li><a href="Records_of_Req_Book_Centers.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>  Book All Order</a></li>
+                            <li><a href="center_to_center_book_req.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>  Pending Book Requests</a></li>
+                           <%-- <li><a href="Order_to_Center.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>  Order Center</a></li>--%>
+
+                    <%--<li><a href="Request_Report.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>  Request Report</a></li>--%>
+                    <%--      </ul>
+                    </li>--%>
+
+                    <li id="citywh" runat="server" visible="false">
+                        <a href="#">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Book Center</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="Citybookwh_to_mainbookwh.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Place Order</a></li>
+                            <li><a href="Citybook_to_mainbook_order_details.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Pending Order</a></li>
+                            <li><a href="Rec_of_po_from_bookwh_to_citybookwh.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                All Order</a></li>
+                            <%-- <li><a href="center_citybookwh.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>  MRN</a></li>
+                            <li><a href="center_rejected_qty_detail_repeater.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>  MRN Details</a></li>--%>
+                        </ul>
+                    </li>
+
+                    <li id="citysplr" runat="server" visible="false">
+                        <a href="#">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Supplier</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="Book_Show_Supplier.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Add New Supplier</a></li>
+                            <li><a href="Show_Splr_vs_book_item.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Suppliers With Items</a></li>
+                            <li><a href="Book_Purchase_Order.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Place Order</a></li>
+                            <li><a href="book_Purchase_Order_Approval.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Pending Order</a></li>
+                            <li><a href="Records_of_Book_Purchase_Order.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                All Order</a></li>
+                            <%-- <li><a href="City_wh_MRN_to_Supplier.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>  MRN</a></li>
+                            <li><a href="center_mrn_to_sp_detail_repeater.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>  MRN Details</a></li>--%>
+                        </ul>
+                    </li>
+
+                    <li id="citylocal" runat="server" visible="false">
+                        <a href="#">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Local Shop</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="Order_to_Local_Regional_book_wh.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Receive Order</a></li>
+
+                            <li><a href="Order_to_Local_Regionalwh_book_report.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                All Order</a></li>
+
+
+
+                        </ul>
+                    </li>
+
+                    <li id="cityAU" runat="server" visible="false">
+                        <a href="#">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Add & Update</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="book_item_type.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Book Item Types</a></li>
+                            <li><a href="book_item_units.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Book  Item Units</a></li>
+                            <li><a href="book_item_sub_cat.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Book Item Sub Category</a></li>
+                            <li><a href="book_item_category.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Book Item Category</a></li>
+                            <li><a href="book_items_rp_ms.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Details of Book Items</a></li>
+
+                        </ul>
+                    </li>
+
+
+
+
+                    <li id="whstock" runat="server" visible="false">
+                        <a href="book_stocks.aspx">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">  Stocks</span> </a>
+
+                    </li>
+
+
+                    <li id="whreport" runat="server" visible="false">
+                        <a href="#">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Report</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+
+                            <li><a href="all_whbook_stock.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Details of Stocks</a></li>
+                        </ul>
+                    </li>
+
+
+
+                    <li id="wh" runat="server" visible="false">
+                        <a href="#">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Book Center</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="Req_from_city_book_Wh.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Pending Order</a></li>
+                            <li><a href="All_city_bookwh_order_list.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                All Order</a></li>
+                            <%--<li><a href="Req_from_center_bookwh_order.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/> Center to Wh Pending Order</a></li>--%>
+                        </ul>
+                    </li>
+
+                    <li id="whsplr" runat="server" visible="false">
+                        <a href="#">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Supplier</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="Book_Show_Supplier.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Add New Supplier</a></li>
+                            <li><a href="Show_Splr_vs_book_item.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Suppliers With Items</a></li>
+                            <li><a href="Main_bookwh_purchase_order.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Place Order</a></li>
+                            <li><a href="main_bookwh_purchase_order_list.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Pending Order</a></li>
+                            <li><a href="All_po_for_main_bookwh_list">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                All Order</a></li>
+                            <%--<li><a href="City_wh_MRN_to_Supplier.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>  MRN</a></li>
+                            <li><a href="center_mrn_to_sp_detail_repeater.aspx"><img src="images/icon2.png" style="width:15px; height:15px;"/>  MRN Details</a></li>--%>
+                        </ul>
+                    </li>
+
+                    <li id="whlocal" runat="server" visible="false">
+                        <a href="#">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Local Shop</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="Order_to_Local_Regional_book_wh.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Receive Order</a></li>
+
+                            <li><a href="Order_to_Local_Regionalwh_book_report.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                All Order</a></li>
+
+
+
+                        </ul>
+                    </li>
+
+                    <li id="whUP" runat="server" visible="false">
+                        <a href="#">
+                            <img src="images/main-icon.png" style="width: 20px; height: 20px;" /><span class="nav-label" style="padding-left: 3px;">Add & Update</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="book_item_type.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Book Item Types</a></li>
+                            <li><a href="book_item_units.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Book  Item Units</a></li>
+                            <li><a href="book_item_sub_cat.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Book Item Sub Category</a></li>
+                            <li><a href="book_item_category.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Book Item Category</a></li>
+                            <li><a href="book_items_rp_ms.aspx">
+                                <img src="images/icon2.png" style="width: 15px; height: 15px;" />
+                                Details of Book Items</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+        </aside>
+
+        <!-- Main Wrapper -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <!-- Main Wrapper -->
+        <!--end main wrappper-->
+
+        <!-- Vendor scripts -->
+        <%--<script src="vendor/jquery/dist/jquery.min.js"></script>--%>
+        <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+        <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
+        <%--<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>--%>
+        <script src="vendor/metisMenu/dist/metisMenu.min.js"></script>
+        <script src="vendor/iCheck/icheck.min.js"></script>
+        <script src="vendor/sparkline/index.js"></script>
+
+        <!-- Form Validation -->
+        <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+
+        <!-- App scripts -->
+        <script src="scripts/homer.js"></script>
+
+        <script>
+
+            $(function () {
+
+                // Searching Lead 
+                $("#lead-search").validate({
+                    rules: {
+
+                        mobile: {
+                            required: true,
+                            number: true,
+                            minlength: 10,
+                            maxlength: 10
+                        },
+
+                    },
+                    messages: {
+                        mobile: {
+                            required: "(Please enter mobile number)",
+                            number: "(Please enter valid mobile number)",
+                            minlength: "(Please enter minimum 10 digit mobile number)",
+                            maxlength: "(Please enter maximum 10 digit mobile number)"
+                        },
+
+                    },
+                    submitHandler: function (form) {
+                        form.submit();
+                    },
+                    errorPlacement: function (error, element) {
+                        if (element.attr("name") == "mobile") {
+                            error.insertAfter("#mobilediv");
+                        } else {
+                            error.insertAfter(element);
+                        }
+
+                    }
+                });
+
+
+                // Crearing New Lead
+
+                $("#createLeadForm").validate({
+                    rules: {
+                        purpose: {
+                            required: true
+                        },
+                        mobileno: {
+                            required: true,
+                            number: true,
+                            minlength: 10,
+                            maxlength: 10
+                        },
+                        source: {
+                            required: true
+                        },
+                        publisher: {
+                            required: true
+                        },
+                        campaign: {
+                            required: true
+                        },
+                        location: {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        purpose: {
+                            required: "(Please select purpose)"
+                        },
+                        mobileno: {
+                            required: "(Please enter mobile number)",
+                            number: "(Please enter valid mobile number)",
+                            minlength: "(Please enter minimum 10 digit mobile number)",
+                            maxlength: "(Please enter maximum 10 digit mobile number)"
+                        },
+                        source: {
+                            required: "(Please select source)"
+                        },
+                        publisher: {
+                            required: "(Please select publisher)"
+                        },
+                        campaign: {
+                            required: "(Please select campaign)"
+                        },
+                        location: {
+                            required: "(Please select location)"
+                        },
+                    },
+                    submitHandler: function (form) {
+                        form.submit();
+                    }
+                });
+
+
+            });
+        </script>
+        <script>
+            /*$("#create_lead_id").click(function(){
+                        alert('sds'); 
+                       $("#create_lead_id").val($("#mobile").val());
+            )};*/
+
+
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+
+            //function startTime() {
+            //    var today = new Date();
+            //    var hour = today.getHours();
+            //    var m = today.getMinutes();
+            //    var s = today.getSeconds();
+            //    // add a zero in front of numbers<10
+            //    var ap = "AM";
+            //    if (hour > 11) { ap = "PM"; }
+            //    if (hour > 12) { hour = hour - 12; }
+            //    if (hour == 0) { hour = 12; }
+            //    if (hour < 10) { hour = "0" + hour; }
+
+            //    //h = getClockTime();
+            //    m = checkTime(m);
+            //    s = checkTime(s);
+            //    document.getElementById('time').innerHTML = hour + ":" + m + ":" + s + " " + ap;
+            //    t = setTimeout(function () {
+            //        startTime()
+            //    }, 500);
+            //}
+            //startTime();
+        </script>
+        <%--  <style>
+            .nav-label:hover, .nav-second-level li:hover{
+                color:#00A300;
+            }
+        </style>--%>
+        <style>
+            #wrapper {
+                margin: 0 0 1px 188px;
+                padding: 0;
+                background: rgb(145 149 149 / 29%);
+                border-left: 1px solid #e4e5e7;
+                transition: all 0.4s ease 0s;
+                position: relative;
+                min-height: 100%;
+                
+            }
+
+            
+            #logo.light-version {
+    background-color: #fff;
+    border-bottom: 1px solid #e4e5e7;
+    text-align: center;
+}
+          
+
+           element.style {
+    padding: 5px 11px 7px 10px;
+}
+
+   #header {
+    background-color: #fff;
+    display: block;
+    height: 172px;
+    margin: -29px;
+    padding: 30px;
+    position: relative;
+    border-bottom: 1px solid #fff;
+}
+
+           #logo {
+    float: left;
+    width: 190px;
+    background-color: #34495e;
+    padding: 18px 10px 18px 18px;
+    height: 56px;
+    text-align: center;
+}
+
+  .profile-picture {
+    padding: 68px 10px;
+    text-align: center;
+}
+
+/*element.style {
+    max-height: 143px;
+    width: 38px;
+}
+*/
+
+#logo.light-version {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+.header-link {
+    padding: 41px 19px 17px 17px;
+    font-size: 18px;
+    float: left;
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #fff;
+    margin-right: 15px;
+     background: #ffffff; 
+    cursor: pointer;
+}
+
+.header-link:hover {
+    background: #fff;
+}
+
+.fa-bars:before {
+    content: "\f0c9";
+    color: #e67e22;
+}
+        </style>
+    
+
+    </form>
+</body>
+</html>

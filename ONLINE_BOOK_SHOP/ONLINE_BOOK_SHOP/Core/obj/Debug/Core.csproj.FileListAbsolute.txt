@@ -1,0 +1,24 @@
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Core\bin\Debug\Core.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Core\bin\Debug\Core.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Core\bin\Debug\DataLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Core\bin\Debug\Encryption.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Core\bin\Debug\Encryption.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Core\obj\Debug\Core.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Core\obj\Debug\Core.pdb
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Core\bin\Debug\Core.dll
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Core\bin\Debug\Core.pdb
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Core\bin\Debug\Encryption.dll
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Core\bin\Debug\Encryption.pdb
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Core\obj\Debug\Core.dll
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Core\obj\Debug\Core.pdb
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Core\bin\Debug\Core.dll
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Core\bin\Debug\Core.pdb
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Core\bin\Debug\Encryption.dll
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Core\bin\Debug\Encryption.pdb
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Core\obj\Debug\Core.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Core\obj\Debug\Core.dll
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Core\obj\Debug\Core.pdb

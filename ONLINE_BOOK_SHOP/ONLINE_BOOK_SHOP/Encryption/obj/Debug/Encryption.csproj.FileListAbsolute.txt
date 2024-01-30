@@ -1,0 +1,15 @@
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Encryption\bin\Debug\Encryption.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Encryption\bin\Debug\Encryption.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Encryption\obj\Debug\Encryption.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Encryption\obj\Debug\Encryption.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\DERP\Encryption\obj\Debug\Encryption.pdb
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Encryption\bin\Debug\Encryption.dll
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Encryption\bin\Debug\Encryption.pdb
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Encryption\obj\Debug\Encryption.dll
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Encryption\obj\Debug\Encryption.pdb
+C:\Users\IT\Documents\Visual Studio 2015\Projects\Warehouse\Warehouse\Encryption\obj\Debug\Encryption.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Encryption\bin\Debug\Encryption.dll
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Encryption\bin\Debug\Encryption.pdb
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Encryption\obj\Debug\Encryption.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Encryption\obj\Debug\Encryption.dll
+C:\Users\Admin\Downloads\Warehouse (4)\Warehouse\Warehouse\Encryption\obj\Debug\Encryption.pdb
